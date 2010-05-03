@@ -1,0 +1,6 @@
+<li>
+  <%= link_to company.name, company %>
+  <% if signed_in? && current_user.admin? %>
+  | <%= link_to "delete", company, :method => :delete, :confirm => "You sure?" %>
+  <% end %>
+</li>
