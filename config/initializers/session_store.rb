@@ -5,7 +5,7 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_fakturio1_session',
+  :key         => '_fakturio_session',
   :secret      => '364f8bed113d6ac8334c60eb76e7603dae10230b8dc1b153dccf8a8060828f836f683058a54af62b8b99a9fed7cacb66c84eceb271451f3e943ff7a99a11a75b'
 }
 
