@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(:version => 20100501222507) do
     t.datetime "updated_at"
   end
 
+  add_index "addresses", ["addressable_id"], :name => "index_addresses_on_addressable_id"
+  add_index "addresses", ["addressable_type"], :name => "index_addresses_on_addressable_type"
+
   create_table "clients", :force => true do |t|
     t.string   "name"
     t.integer  "company_id"

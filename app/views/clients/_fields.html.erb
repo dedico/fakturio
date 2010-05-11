@@ -1,0 +1,9 @@
+<% semantic_form_for([current_user, @current_company,  @client]) do |form| %>
+  <%= form.inputs :name %>
+
+    <% form.semantic_fields_for :address do |a| %>
+        <%= a.inputs :street, :house_number, :postcode, :city, :countr %>
+    <% end %>
+
+  <%= form.buttons %>
+<% end %>

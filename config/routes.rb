@@ -1,7 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :clients
 
-  map.resources :users, :has_many => :companies
+#  map.resources :users, :has_many => :companies
+  map.resources :users do |users|
+    users.resources :companies do |companies|
+      companies.resources :clients
+    end
+  end
   map.resources :sessions
   map.signin '/signin', :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'

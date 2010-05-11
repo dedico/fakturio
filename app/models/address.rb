@@ -1,5 +1,6 @@
 class Address < ActiveRecord::Base
-  belongs_to :addressable, :polymorphic => true  
+  belongs_to :addressable, :polymorphic => true
+  attr_accessible :street, :house_number, :city, :postcode, :countr
 end
 
 # == Schema Information

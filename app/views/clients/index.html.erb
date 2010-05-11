@@ -2,19 +2,19 @@
 
 <table>
   <tr>
+    <th>Company</th>
     <th>Name</th>
   </tr>
 
 <% @clients.each do |client| %>
   <tr>
-    <td><%=h client.name %></td>
-    <td><%= link_to 'Show', client %></td>
-    <td><%= link_to 'Edit', edit_client_path(client) %></td>
-    <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=client.company.name %></td>
+    <td><%=client.name %></td>
+    <td><%= link_to 'Show', user_company_client_path(current_user, @current_company, client) %></td>
+    <td><%= link_to 'Edit', edit_user_company_client_path(current_user, @current_company, client) %></td>
+    <td><%= link_to 'Destroy', user_company_client_path(current_user, @current_company, client), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New client', new_client_path %>
+<%= link_to 'New client', new_user_company_client_path(current_user, @current_company) %>

@@ -20,8 +20,9 @@
     <td><%=company.address.postcode %></td>
     <td><%=company.address.countr %></td>
     <td><%=company.vat %></td>
-    <td><%= link_to 'Show', user_company_path(current_user, company) %></td>
+    <td><%= link_to 'Details', user_company_path(current_user, company) %></td>
     <td><%= link_to 'Edit', edit_user_company_path(current_user, company) %></td>
+    <td><%= link_to 'Customers', user_company_clients_path(current_user, company) %></td>
     <td><%= link_to 'Destroy', user_company_path(current_user, company), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

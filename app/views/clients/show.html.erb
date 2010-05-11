@@ -1,8 +1,6 @@
 <p>
   <b>Name:</b>
-  <%=h @client.name %>
+  <%=@client.name %>
 </p>
 
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to 'Back', user_company_clients_path %>
